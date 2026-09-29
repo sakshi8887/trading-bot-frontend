@@ -75,7 +75,7 @@ function App() {
     const fetchStrategy = async () => {
       try {
         const response = await fetch(
-          "http://localhost:5000/api/strategy/signal"
+            `${import.meta.env.VITE_API_URL}/api/strategy/signal`
         );
 
         if (!response.ok) {

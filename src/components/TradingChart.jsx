@@ -96,7 +96,7 @@ function TradingChart({ marketData }) {
         setError("");
 
         const response = await fetch(
-          "http://localhost:5000/api/market/klines?symbol=BTCUSDT&interval=1m&limit=200"
+          `${import.meta.env.VITE_API_URL}/api/market/klines?symbol=BTCUSDT&interval=1m&limit=200`
         );
 
         if (!response.ok) {
